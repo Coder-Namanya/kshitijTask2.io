@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <img src="https://cdn-icons-png.freepik.com/512/806/806131.png" alt="Tic-Tac-Toe Icon" class="game-icon">
+        <div class="title-container">
+            <h1 class="game-title">Tic-Tac-Toe</h1>
+            <h2 class="game-subtitle">The Classic Game of X's and O's</h2>
+        </div>
+    </div>
+    <div class="game">
+        <div id="turnIndicator">Player X's turn</div>
+        <div class="board-container">
+            <div id="board" class="board"></div>
+        </div>
+        <div class="options">
+            <label for="boardSizeSelector">Board Size:</label>
+            <select id="boardSizeSelector">
+                <option value="3">3x3</option>
+                <option value="4">4x4</option>
+                <option value="5">5x5</option>
+                <option value="6">6x6</option>
+                <option value="7">7x7</option>
+                <option value="8">8x8</option>
+                <option value="9">9x9</option>
+                <option value="10">10x10</option>
+            </select>
+            <button id="toggleModeButton">Switch to Solo Mode</button> <!-- Toggle mode button -->
+            <p id="modeIndicator">Normal Mode</p> <!-- Mode indicator -->
+            <button id="resetButton">Reset Game</button>
+        </div>
+        <p id="status"></p>
+    </div>
+
+    <!-- Modal for Reset Confirmation -->
+    <div id="resetModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Are you sure you want to reset the current game?</p>
+            <button id="confirmResetButton">Yes, Reset</button>
+            <button id="cancelResetButton">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Leaderboard Section -->
+    <div id="leaderboard" class="leaderboard">
+        <h2>Leaderboard:&nbsp;&nbsp;&nbsp;</h2>
+        <div id="player1Score" class="player-score">Player 1: 0</div>
+        <div id="player2Score" class="player-score">Player 2: 0</div>
+        <button id="resetScoresButton">Reset Scores</button>
+        <button id="changeNameButton">Change Names</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
